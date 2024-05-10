@@ -38,7 +38,7 @@ def calculator():
         division(x,y)
     
     else:
-        print("Could not register operation, please try again.")
+        print("Could not register operation, please try again. Wahhh")
         calculator()
 
     
