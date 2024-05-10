@@ -20,9 +20,9 @@ def division(x,y):
 def calculator():
     op = input("Select operation: add, subtract, multiply, or divide: ")
     
-    op_tuple = userinput()
-    x = int(op_tuple[0])
-    y = int(op_tuple[1])
+    
+    x = userinput_x()
+    y = userinput_y()
 
 
     if (op == "add") or (op == "Add") or (op == "ADD"):
@@ -45,11 +45,31 @@ def calculator():
         
 
 
-def userinput():
+def userinput_x():
     x = input("Enter first number: ")
-    y = input('Enter second number: ')
+    
+    try:
+        x = int(x)
+       
+    except:
+        print("Must be an integer")
+        userinput_x()
+        
+    return x
 
-    return x,y
+
+
+def userinput_y():
+    y = input("Enter second number: ")
+    
+    try:
+        y = int(y)
+       
+    except:
+        print("Must be an integer")
+        userinput_y()
+        
+    return y
 
 
 calculator()
